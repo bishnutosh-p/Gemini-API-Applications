@@ -18,11 +18,15 @@ This project utilizes the Gemini API to query generative AI models based on imag
 1. Streamlit App for Visual/Image Input ( vision_app.py )
 ![alt text](image.png)
 
+Link : https://vision-app.streamlit.app/
+
 2. Streamlit App for Text Input ( single_query_app.py )
 ![alt text](image-1.png)
 
 3. Streamlit App for Question and Answer Chat ( qna_chat_app.py )
 ![alt text](image-3.png)
+
+Link : https://chat-app-gemini-qna.streamlit.app/
 
 4. CLI App for Local Running ( local_app.py )
 ![alt text](image-2.png)
@@ -37,8 +41,8 @@ This project utilizes the Gemini API to query generative AI models based on imag
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/gemini-api-generative-query.git
-   cd gemini-api-generative-query
+   git clone https://github.com/bishnutosh-p/Gemini-API-Applications.git
+   cd gemini-api-applications
    ```
 
 2. **Install Dependencies**:
@@ -49,19 +53,20 @@ This project utilizes the Gemini API to query generative AI models based on imag
 3. **Set Up Environment Variables**:
    Create a `.env` file in the root directory and add your Gemini API key:
    ```bash
-   GEMINI_API_KEY=your_api_key_here
+   API_KEY="your_api_key_here"
    ```
-
-## Usage
-
-1. 
+   Incase you are deploying using Streamlit then create a folder of .streamlit and add secret.toml file inside which you store your secret/api key.
 
 ### Running the Streamlit Application
 
 1. **Start the Streamlit App**:
    ```bash
-   streamlit run app.py
+   streamlit run <app_name>.py
    ```
+   <app_name> can be substituted with the following
+   - vision_app.py
+   - qna_chat_app.py
+   - single_query_app.py
 
 2. **Access the Web Interface**:
    Open your browser and go to `http://localhost:8501` to use the application.
@@ -70,14 +75,21 @@ This project utilizes the Gemini API to query generative AI models based on imag
    - You can input an image by uploading it or text directly into the provided fields.
    - The application will process the input and generate a text response.
 
+4. **You can run the Local**
+   ```bash
+   python local_app.py
+   ```
+
 ## Project Structure
 
 ```
-gemini-api-generative-query/
+gemini-api-applications/
 │
-├── app.py              # Main Streamlit application file
-├── gemini_client.py    # Handles communication with the Gemini API
-├── utils.py            # Utility functions for image and text processing
+├── vision_app.py       # Main Streamlit application file for image based
+├── qna_chat_app.py     # Main Streamlit application file for text based continues communication
+├── local_app.py        # App which runs locally
+├── single_query_app.py # Main Streamlit application file for text based
+├── .gitignore          # Utility functions for image and text processing
 ├── requirements.txt    # Python dependencies
 └── README.md           # Project documentation
 ```

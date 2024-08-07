@@ -1,2 +1,4 @@
 google.generativeai
 pyfiglet
+os
+streamlit
