@@ -1,0 +1,9 @@
+run the commands : 
+    "pip install -r requirements.txt"
+to run the local app : 
+    "python app.py"
+        before running this you should make sure that the main function only calls the test() function.
+        also make sure to create a .env file and put your Gemini API key in it.
+
+References:
+1. https://www.youtube.com/watch?v=CC6qMpqgUMU&list=PLZoTAELRMXVNbDmGZlcgCA3a8mRQp5axb&index=3

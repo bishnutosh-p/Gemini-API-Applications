@@ -1,6 +1,5 @@
 from PIL import Image
 import streamlit as st
-import os
 import google.generativeai as genai
 
 # Enter your Gemini API key which you can get from https://console.cloud.google.com/

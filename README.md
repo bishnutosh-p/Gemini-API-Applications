@@ -13,9 +13,23 @@ This project utilizes the Gemini API to query generative AI models based on imag
 - **Streamlit Interface**: Provides an easy-to-use web interface for interaction with the application.
 - **Modular Design**: Easily extendable for different use cases or additional functionalities.
 
-## Requirements
+## Screenshots
 
-- Python 3.7+
+1. Streamlit App for Visual/Image Input ( vision_app.py )
+![alt text](image.png)
+
+2. Streamlit App for Text Input ( single_query_app.py )
+![alt text](image-1.png)
+
+3. Streamlit App for Question and Answer Chat ( qna_chat_app.py )
+![alt text](image-3.png)
+
+4. CLI App for Local Running ( local_app.py )
+![alt text](image-2.png)
+
+## Requirements/Prerequisites
+
+- Python 3
 - Gemini API Key
 - Streamlit
 
@@ -39,6 +53,8 @@ This project utilizes the Gemini API to query generative AI models based on imag
    ```
 
 ## Usage
+
+1. 
 
 ### Running the Streamlit Application
 
@@ -70,10 +86,5 @@ gemini-api-generative-query/
 
 Contributions are welcome! Please submit a pull request or open an issue for any features, bugs, or suggestions.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
+## Thank You.. :)
 ---
-
-This version is formatted correctly for GitHub's Markdown rendering. You can copy and paste it directly into your README file.
