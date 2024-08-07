@@ -1,17 +1,19 @@
-from dotenv import load_dotenv
-load_dotenv()
-
 from PIL import Image
 import streamlit as st
 import os
 import google.generativeai as genai
 
+# Enter your Gemini API key which you can get from https://console.cloud.google.com/
 
-# api_key = st.secrets['API_KEY']
-
-genai.configure(api_key = os.getenv('API_KEY'))
+# api_key = "YOUR API KEY"  # Uncomment this and add your key here..
 # genai.configure(api_key = api_key)
 
+# This line allows you to access the API key from the secrets file in Streamlit Sharing. 
+# If you are running this code locally, you can comment the below 2 lines and uncomment the above part.
+api_key = st.secrets['API_KEY']
+genai.configure(api_key = api_key)
+
+# Choosing among the available models present in GEmini.
 model = genai.GenerativeModel("gemini-1.5-pro")
 
 def get_reponse(input,image):
@@ -21,9 +23,9 @@ def get_reponse(input,image):
         response = model.generate_content(image)
     return response.text
 
-st.set_page_config(page_title="Gemini Vision App", page_icon=":smile:",layout="wide")
+st.set_page_config(page_title="Gemini Vision App", page_icon=":photo:",layout="wide")
 
-st.header("Google Gemini Image")
+st.header("Gemini Image Application")
 
 input = st.text_input("Input : ", key = "input")
 
